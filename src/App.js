@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
       width: '18%',
     },
     [theme.breakpoints.up('xl')]: {
-      width: '12%',
+      width: '10%',
     },
   },
 }));
