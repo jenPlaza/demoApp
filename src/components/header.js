@@ -14,43 +14,29 @@ import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   navbar: {
+    width: '100%',
+    padding: '3% 5% 3% 4%',
     [theme.breakpoints.up('sm')]: {
       marginTop: '5%',
     },
   },
   navBrand: {
     width: '50%',
-    [theme.breakpoints.up('sm')]: {
-      width: '30%',
-    },
-    [theme.breakpoints.up('md')]: {
-      width: '25%',
-      height: '200px',
-    },
-    [theme.breakpoints.up('lg')]: {
-      width: '20%',
-    },
-    [theme.breakpoints.up('xl')]: {
-      width: '15%',
-    },
+    float: 'left,',
   },
   navItemContainer: {
     width: '355px',
-    margin: '12% 5%',
+    float: 'right',
+
     [theme.breakpoints.up('sm')]: {
       width: '400px',
-      margin: '10% -5%',
     },
-    [theme.breakpoints.up('md')]: {
-      margin: '10% 12%',
-    },
+    [theme.breakpoints.up('md')]: {},
     [theme.breakpoints.up('lg')]: {
       width: '600px',
-      margin: '10% 0% 0% 30%',
     },
     [theme.breakpoints.up('xl')]: {
       width: '800px',
-      margin: '10% 0% 0% 42%',
     },
   },
   navItem: {
@@ -71,8 +57,12 @@ const Header = (props) => {
   return (
     <div>
       <Navbar color="transparent" light expand="md" className={classes.navbar}>
-        <NavbarBrand href="/demoApp/" className={classes.navBrand}>
-          <img className="w-50 float-left" src={logo} alt="Logo" />
+        <NavbarBrand
+          style={{ color: '#2b9348', fontSize: '2em' }}
+          href="/demoApp/"
+          className={classes.navBrand}
+        >
+          <b>LOGO</b>
         </NavbarBrand>
         <NavbarToggler className="navbar-toggler ml-auto" onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
