@@ -22,25 +22,22 @@ const useStyles = makeStyles((theme) => ({
     border: '15px solid #d4d700',
     borderRadius: '50%',
     width: '50%',
-    height: '200px',
+    height: '180px',
     margin: 'auto',
     marginTop: '5%',
     [theme.breakpoints.up('sm')]: {
       width: '35%',
-      height: '250px',
+      height: '230px',
     },
     [theme.breakpoints.up('md')]: {
       width: '25%',
-      height: '250px',
       marginLeft: '35%',
     },
     [theme.breakpoints.up('lg')]: {
       width: '18%',
-      height: '250px',
     },
     [theme.breakpoints.up('xl')]: {
       width: '13%',
-      height: '240px',
     },
   },
 }));
