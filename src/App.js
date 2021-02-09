@@ -4,53 +4,42 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 //pages
 import Home from './pages/home';
 import About from './pages/about';
-import Users from './pages/users';
+import Blog from './pages/blog';
+import Header from './components/header';
+
+import { makeStyles } from '@material-ui/core';
+
+const useStyles = makeStyles((theme) => ({
+  container: {
+    backgroundColor: '#2b9348',
+    border: '15px solid #d4d700',
+    borderRadius: '50%',
+    width: '25%',
+    height: '200px',
+    margin: 'auto',
+  },
+}));
 
 export default function App() {
+  const classes = useStyles();
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+      <Header />
+      <div className={classes.container}>
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
+          <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + '/about'}
+            component={About}
+          />
+          <Route
+            exact
+            path={process.env.PUBLIC_URL + '/blog'}
+            component={Blog}
+          />
         </Switch>
       </div>
     </Router>
   );
 }
-
-/* function Home() {
-  return <h2>Home</h2>;
-}
-
-function About() {
-  return <h2>About</h2>;
-}
-
-function Users() {
-  return <h2>Users</h2>;
-}
- */
