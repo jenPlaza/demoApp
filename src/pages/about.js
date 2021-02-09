@@ -4,6 +4,9 @@ const useStyles = makeStyles((theme) => ({
   container: {
     color: 'white',
     margin: '35% 10%',
+    [theme.breakpoints.up('sm')]: {
+      margin: '35% 23%',
+    },
   },
 }));
 

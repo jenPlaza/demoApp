@@ -9,14 +9,39 @@ import Header from './components/header';
 
 import { makeStyles } from '@material-ui/core';
 
+/* platform sizes
+xs = 375 px,
+  sm = 768 px,
+  md = 992 px,
+  lg = 1500 px,
+  xl = 2000 px, */
+
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: '#2b9348',
     border: '15px solid #d4d700',
     borderRadius: '50%',
-    width: '25%',
+    width: '50%',
     height: '200px',
     margin: 'auto',
+    marginTop: '5%',
+    [theme.breakpoints.up('sm')]: {
+      width: '35%',
+      height: '250px',
+    },
+    [theme.breakpoints.up('md')]: {
+      width: '25%',
+      height: '250px',
+      marginLeft: '35%',
+    },
+    [theme.breakpoints.up('lg')]: {
+      width: '18%',
+      height: '250px',
+    },
+    [theme.breakpoints.up('xl')]: {
+      width: '13%',
+      height: '240px',
+    },
   },
 }));
 
