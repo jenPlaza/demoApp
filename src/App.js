@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '35%',
     },
     [theme.breakpoints.up('lg')]: {
-      width: '18%',
+      width: '15%',
     },
     [theme.breakpoints.up('xl')]: {
-      width: '10%',
+      width: '18%',
     },
   },
 }));
