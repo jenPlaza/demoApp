@@ -19,14 +19,14 @@ xs = 375 px,
 const useStyles = makeStyles((theme) => ({
   container: {
     backgroundColor: '#2b9348',
-    border: '15px solid #d4d700',
+    border: '12px solid #d4d700',
     borderRadius: '50%',
     width: '50%',
     height: '180px',
     margin: 'auto',
     marginTop: '5%',
     [theme.breakpoints.up('sm')]: {
-      width: '35%',
+      width: '30%',
       height: '230px',
     },
     [theme.breakpoints.up('md')]: {
