@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
       height: '230px',
     },
     [theme.breakpoints.up('md')]: {
-      width: '25%',
+      width: '24%',
       marginLeft: '35%',
     },
     [theme.breakpoints.up('lg')]: {
